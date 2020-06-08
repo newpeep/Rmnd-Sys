@@ -1,5 +1,5 @@
 % Runs CascadeLinTS and return Cumulative Regret, Cumulative Reward and Top K movies
-function [regret,reward,A] = CascadeLinTS_NN(variance,d,n,K,movie_features,W_test,A_star,theta_star,w_movie)
+function [regret,reward,A] = CascadeLinTS_NN(variance,d,n,K,movie_features,W_test,A_star,theta_star,w_movie,num_movies)
 
 % Initialization
 iM = eye(d);
@@ -7,6 +7,7 @@ B = zeros(d,1);
 regret =zeros(n,1);
 reward =zeros(n,1);
 net = feedforwardnet;
+num_movie= num_movies
 for i = 1:n
    % Sampling from Multivariate normal distribution 
    if issymmetric(iM) == 0
