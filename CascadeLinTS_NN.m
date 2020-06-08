@@ -6,7 +6,7 @@ iM = eye(d);
 B = zeros(d,1);
 regret =zeros(n,1);
 reward =zeros(n,1);
-
+net = feedforwardnet;
 for i = 1:n
    % Sampling from Multivariate normal distribution 
    if issymmetric(iM) == 0
