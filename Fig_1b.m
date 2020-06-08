@@ -55,7 +55,7 @@ for algo_no = [1,2,3,4]
         [regret,reward,A] = CascadeUCB(n,K,num_movies,W_test,A_star,w_movie);  
         end
         if algo_no == 5
-        [regret,reward,A] = CascadeLinTS_NN(variance,d,n,K,movie_features,W_test,A_star,theta_star,w_movie); 
+        [regret,reward,A] = CascadeLinTS_NN(variance,d,n,K,movie_features,W_test,A_star,theta_star,w_movie,num_movies); 
         end
         cum_regret(:,i) = cumsum(regret);
     end
